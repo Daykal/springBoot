@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
-
     private final Coach myCoach;
+
 //
 //    @Autowired
 //    public void setMyCoach(Coach theCoach){
@@ -17,7 +17,7 @@ public class DemoController {
 //    }
 
     @Autowired
-    public DemoController(@Qualifier("baseballCoach") Coach theCoach) {
+    public DemoController(@Qualifier("swimCoach") Coach theCoach) {
         this.myCoach = theCoach;
     }
 
@@ -25,5 +25,6 @@ public class DemoController {
     public String getDailyWorkout() {
         return myCoach.getDailyWorkouts();
     }
+
 
 }

@@ -28,11 +28,12 @@ public class FunRestController {
     // expose a new endpoint for "workout"
 
     @GetMapping("/workout")
-    public String getDailyWorkout(){
+    public String getDailyWorkout() {
         return "Run a hard 10K";
     }
+
     @GetMapping("/fortune")
-    public String getDailyFortune(){
+    public String getDailyFortune() {
         return "Today is your lucky day";
     }
 
